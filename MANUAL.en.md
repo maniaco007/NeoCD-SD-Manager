@@ -121,6 +121,17 @@ A name marked **approximate** means the folder title did not match the database 
 3. In the game list the titles appear with the organized names.
 4. When you rest the cursor on a game for a moment, its **cover** (the `bg.bmp` in the game's folder) shows in the box next to the list.
 
+![Game list with the cover next to it](imagens/menu-lista-capa.png)
+
+![A game's cover in the box next to the list](imagens/menu-capa.png)
+
+With the BR menu installed, the **About** screen shows the version (`Menu: V0.14BR`) and the credits, and the other screens are in Portuguese:
+
+| | |
+|---|---|
+| ![Main menu](imagens/menu-principal.png) | ![Settings](imagens/menu-configuracoes.png) |
+| ![Credits](imagens/menu-creditos.png) | |
+
 ---
 
 ## 6. What goes where on the card

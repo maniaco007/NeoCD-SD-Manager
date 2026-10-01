@@ -22,6 +22,12 @@ Você coloca o cartão SD no PC, com os jogos já nele, abre o aplicativo e clic
 |---|---|
 | ![Jogos e capas](imagens/app-jogos.png) | ![Capa no console](imagens/menu-capa.png) |
 
+**O menu no console:**
+
+| | | |
+|---|---|---|
+| ![Menu principal](imagens/menu-principal.png) | ![Configurações](imagens/menu-configuracoes.png) | ![Créditos](imagens/menu-creditos.png) |
+
 - **Nada é apagado:** os nomes antigos podem ser restaurados (botão **Desfazer último**) e o que for substituído no cartão vai para a pasta `_neocd-manager`.
 - **Prévia fiel:** ao clicar num jogo, você vê a capa como o console vai mostrar (cores reduzidas, mesmas paletas).
 - **Português ou inglês:** menu **Idioma / Language**, com temas de cor para a janela.

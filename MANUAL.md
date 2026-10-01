@@ -121,6 +121,17 @@ Um nome marcado como **aproximado** significa que o título da pasta não bateu 
 3. Na lista de jogos, os títulos aparecem com os nomes organizados.
 4. Ao parar o cursor sobre um jogo por instantes, a **capa** (`bg.bmp` da pasta do jogo) aparece na caixa ao lado da lista.
 
+![Lista de jogos com a capa ao lado](imagens/menu-lista-capa.png)
+
+![Capa de um jogo na caixa ao lado da lista](imagens/menu-capa.png)
+
+Com o menu BR instalado, a tela **Sobre** mostra a versão (`Menu: V0.14BR`) e os créditos, e as demais telas estão em português:
+
+| | |
+|---|---|
+| ![Menu principal](imagens/menu-principal.png) | ![Configurações](imagens/menu-configuracoes.png) |
+| ![Créditos](imagens/menu-creditos.png) | |
+
 ---
 
 ## 6. O que fica em cada pasta do cartão

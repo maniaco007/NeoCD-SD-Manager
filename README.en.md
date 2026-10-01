@@ -22,6 +22,12 @@ Put the SD card in the PC with the games already on it, open the app and click *
 |---|---|
 | ![Games and covers](imagens/app-jogos-en.png) | ![Cover on the console](imagens/menu-capa.png) |
 
+**The menu on the console:**
+
+| | | |
+|---|---|---|
+| ![Main menu](imagens/menu-principal.png) | ![Settings](imagens/menu-configuracoes.png) | ![Credits](imagens/menu-creditos.png) |
+
 - **Nothing is deleted:** old names can be restored (**Undo last** button) and whatever is replaced on the card goes to the `_neocd-manager` folder.
 - **Faithful preview:** click a game to see its cover as the console will show it (reduced colors, same palettes).
 - **Portuguese or English:** **Idioma / Language** menu, plus window color themes.
