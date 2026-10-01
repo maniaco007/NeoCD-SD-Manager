@@ -104,7 +104,7 @@ Ao final aparece o resumo: pastas renomeadas, capas geradas, jogos sem capa, jog
 
 Para ver e conferir tudo **antes** de mexer:
 
-1. **Analisar cartão:** lista todos os jogos com o nome atual, o **nome novo**, *como foi identificado* (nome, nome aproximado, conteúdo/CRC ou não identificado) e se já têm capa. Laranja = será renomeado; verde = já está certo; vermelho = não identificado, nome aproximado a revisar, ou arquivo faltando.
+1. **Analisar cartão:** lista todos os jogos com o nome atual, o **nome novo**, *como foi identificado* (nome, nome aproximado, conteúdo/CRC ou não identificado) e se já têm capa. Na cor de destaque do tema (laranja no tema padrão) = será renomeado; verde = já está certo; vermelho = não identificado ou com arquivo faltando; nome aproximado a revisar começa com `?`.
 2. **Aplicar nomes:** renomeia as pastas (com confirmação). O registro fica em `_neocd-manager/desfazer.json`.
 3. **Desfazer último:** volta as pastas do último lote ao nome anterior.
 4. **Gerar capas:** cria os `bg.bmp` dos jogos listados, com as opções da aba *Preparar cartão*.

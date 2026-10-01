@@ -104,7 +104,7 @@ At the end you get a summary: folders renamed, covers made, games without a cove
 
 To see and check everything **before** changing anything:
 
-1. **Analyze card:** lists every game with the current name, the **new name**, *how it was identified* (name, approximate name, content/CRC or not identified) and whether it already has a cover. Orange = will be renamed; green = already right; red = not identified, approximate name to review, or a missing file.
+1. **Analyze card:** lists every game with the current name, the **new name**, *how it was identified* (name, approximate name, content/CRC or not identified) and whether it already has a cover. In the theme's highlight color (orange in the default theme) = will be renamed; green = already right; red = not identified or with a missing file; an approximate name to review starts with `?`.
 2. **Apply names:** renames the folders (with confirmation). The log is kept in `_neocd-manager/desfazer.json`.
 3. **Undo last:** puts the folders of the last batch back to their previous names.
 4. **Make covers:** creates the `bg.bmp` files for the listed games, with the options from the *Prepare card* tab.
