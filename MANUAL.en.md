@@ -61,11 +61,19 @@ This is the main tab: tick what you want and click **Prepare card**. Each step w
 
 ### Step 1 — Install the menu
 
-Copies the update file **`NSDL0014.WAD`** (menu **V0.14 BR**) to the card root and verifies the copy byte by byte (CRC32) before finishing.
+Copies the update file **`NSDL014B.WAD`** (menu **V0.14 BR**, MCU **0.12**) to the card root and verifies the copy byte by byte (CRC32) before finishing.
 
 - The loader uses the **first `.wad`** it finds in the root. So if the card has another `.wad`, the app **moves it to the backup** (it does not delete it).
 - The app **writes nothing to the console**. The update happens on the console when you power it on with the card: if the installed menu/CPLD versions differ from the file's, the loader updates itself; if they already match, nothing happens.
 - Next to the step the app shows whether the menu is already on the card.
+
+**"Also write the new MCU to the console" option** (off by default). The MCU is the loader's microcontroller; version 0.12 fixes the **game list sorting** (the first game in the list could end up out of order). The MCU is only rewritten by the bootloader when an **`NSDLZZZZ.WAD`** is on the card — the normal updater does not touch it. With the option ticked, the app creates that file (a verified copy of the same WAD). Then:
+
+1. power the console on **once** with the card;
+2. put the card back in the PC and **delete `NSDLZZZZ.WAD`** — while it stays on the card the MCU is rewritten at every boot. If you forget, the app moves it to the backup the next time it runs;
+3. on the **About** screen, check `MCU: V00.12`.
+
+You only need this once per console. If it already shows `MCU: V00.12`, leave the option off.
 
 ### Step 2 — Organize the game names
 
@@ -125,7 +133,7 @@ An **approximate** name means the folder title did not match the database exactl
 
 ![A game's cover in the box next to the list](imagens/menu-capa.png)
 
-With the BR menu installed, the **About** screen shows the version (`Menu: V0.14BR`) and the credits, and the other screens are in Portuguese:
+With the BR menu installed, the **About** screen shows the version (`Menu: V0.14BR`) and the credits (`MCU: V00.12` with the sorting fix), and the other screens are in Portuguese:
 
 | | |
 |---|---|
@@ -138,7 +146,8 @@ With the BR menu installed, the **About** screen shows the version (`Menu: V0.14
 
 ```
 /                         card root (FAT32)
-├─ NSDL0014.WAD           menu V0.14 BR (only needs to stay until the console updates)
+├─ NSDL014B.WAD           menu V0.14 BR + MCU 0.12 (only needs to stay until the console updates)
+├─ NSDLZZZZ.WAD           (only if you ticked "write the MCU"; delete it after the first boot)
 ├─ Fatal Fury 2/          one folder per game
 │   ├─ game.cue           the menu lists folders that hold a .cue
 │   ├─ game.bin           (disc files: never changed)

@@ -50,7 +50,7 @@ Passo a passo completo, com todas as opções: **[Manual do aplicativo](MANUAL.m
 
 ## Aviso
 
-Este projeto **não fornece jogos nem BIOS**. O arquivo de atualização do menu incluído (`NSDL0014.WAD`) é software livre (GPL) baseado no Neo CD SD Loader de Furrtek e contém apenas os patches do loader, sem a BIOS do console; o código-fonte está em [NeoCDSDLoader-BR-Edition](https://github.com/maniaco007/NeoCDSDLoader-BR-Edition). Este projeto não é afiliado à SNK nem a Furrtek. Use por sua conta e risco.
+Este projeto **não fornece jogos nem BIOS**. O arquivo de atualização do menu incluído (`NSDL014B.WAD`) é software livre (GPL) baseado no Neo CD SD Loader de Furrtek e contém apenas os patches do loader, sem a BIOS do console; o código-fonte está em [NeoCDSDLoader-BR-Edition](https://github.com/maniaco007/NeoCDSDLoader-BR-Edition). Este projeto não é afiliado à SNK nem a Furrtek. Use por sua conta e risco.
 
 ## Créditos
 

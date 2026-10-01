@@ -61,11 +61,19 @@ Um projeto do blog **[Maniaco Game Room](https://www.maniacogameroom.com.br/)**.
 
 ### Passo 1 — Instalar o menu
 
-Copia o arquivo de atualização **`NSDL0014.WAD`** (menu **V0.14 BR**) para a raiz do cartão e confere a cópia byte a byte (CRC32) antes de concluir.
+Copia o arquivo de atualização **`NSDL014B.WAD`** (menu **V0.14 BR**, MCU **0.12**) para a raiz do cartão e confere a cópia byte a byte (CRC32) antes de concluir.
 
 - O loader usa o **primeiro `.wad`** que achar na raiz. Por isso, se houver outro `.wad` no cartão, o aplicativo o **move para o backup** (não apaga).
 - O aplicativo **não grava nada no console**. A atualização acontece no console, quando você o liga com o cartão: se as versões do menu/CPLD instaladas forem diferentes das do arquivo, o loader se atualiza sozinho; se já estiverem iguais, nada acontece.
 - Ao lado do passo aparece se o menu já está no cartão.
+
+**Opção "Também gravar o MCU novo no console"** (desligada por padrão). O MCU é o microcontrolador do loader; a versão 0.12 corrige a **ordenação da lista de jogos** (o primeiro jogo da lista podia ficar fora de ordem). O MCU só é regravado pelo bootloader quando existe um **`NSDLZZZZ.WAD`** no cartão — o atualizador normal não mexe nele. Com a opção marcada, o aplicativo cria esse arquivo (cópia verificada do mesmo WAD). Então:
+
+1. ligue o console **uma vez** com o cartão;
+2. volte o cartão ao PC e **apague o `NSDLZZZZ.WAD`** — enquanto ele estiver no cartão, o MCU é regravado a cada boot. Se você esquecer, o aplicativo o move para o backup na próxima vez que rodar;
+3. na tela **Sobre**, confira `MCU: V00.12`.
+
+Só é preciso fazer isso uma vez por console. Quem já está com `MCU: V00.12` não precisa marcar a opção.
 
 ### Passo 2 — Organizar os nomes dos jogos
 
@@ -125,7 +133,7 @@ Um nome **aproximado** significa que o título da pasta não bateu exatamente co
 
 ![Capa de um jogo na caixa ao lado da lista](imagens/menu-capa.png)
 
-Com o menu BR instalado, a tela **Sobre** mostra a versão (`Menu: V0.14BR`) e os créditos, e as demais telas estão em português:
+Com o menu BR instalado, a tela **Sobre** mostra a versão (`Menu: V0.14BR`) e os créditos (`MCU: V00.12` com a correção da ordenação), e as demais telas estão em português:
 
 | | |
 |---|---|
@@ -138,7 +146,8 @@ Com o menu BR instalado, a tela **Sobre** mostra a versão (`Menu: V0.14BR`) e o
 
 ```
 /                         raiz do cartão (FAT32)
-├─ NSDL0014.WAD           menu V0.14 BR (só precisa ficar até o console atualizar)
+├─ NSDL014B.WAD           menu V0.14 BR + MCU 0.12 (só precisa ficar até o console atualizar)
+├─ NSDLZZZZ.WAD           (só se você marcou "gravar o MCU"; apague depois do 1º boot)
 ├─ Fatal Fury 2/          uma pasta por jogo
 │   ├─ jogo.cue           o menu lista as pastas que têm um .cue
 │   ├─ jogo.bin           (arquivos do disco: não são alterados)
