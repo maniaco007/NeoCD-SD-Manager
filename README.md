@@ -4,9 +4,10 @@
 
 **Aplicativo para Windows que deixa o cartão SD do Neo Geo CD (Neo CD SD Loader — BR Edition) pronto em poucos cliques: instala o menu, dá o nome certo a cada jogo e gera a capa de cada um.**
 
-Um projeto do blog **[Maniaco Game Room](https://www.maniacogameroom.com.br/)**.
+Um projeto do site **[Maniaco Game Room](https://www.maniacogameroom.com.br/)**.
 
-![Lista de jogos com a capa ao lado](imagens/menu-lista-capa.png)
+<img width="1254" height="1254" alt="image" src="https://github.com/user-attachments/assets/8d671684-9641-4fdf-b250-af81ca126847" />
+
 
 ## Como funciona
 
