@@ -79,7 +79,7 @@ Reads the game folders on the card and renames each one with the proper title.
 
 **Name style:**
 
-- **Short title (default):** the Western title, without tags. E.g. `Garou Densetsu 2 ~ Fatal Fury 2 (Japan) (En,Ja)` → `Fatal Fury 2`. If two folders would get the same name, the region is added: `Fatal Fury 2 (Japan)` and `Fatal Fury 2 (USA)`.
+- **Short title (default):** the Western title, without tags and **without subtitle**. E.g. `Garou Densetsu 2 ~ Fatal Fury 2 (Japan) (En,Ja)` → `Fatal Fury 2`; `Galaxy Fight - Universal Warriors` → `Galaxy Fight`. If two folders would get the same name, the region is added: `Fatal Fury 2 (Japan)` and `Fatal Fury 2 (USA)`.
 - **Full official name:** the Redump database name, as it is.
 
 Names are written in **plain ASCII** (no accents or special symbols), because the loader uses code page 850 for file names. Only the **folder** is renamed: the files inside (`.cue`, `.bin`, `.wav`) are **not touched**, so the `.cue` references stay valid. A folder never overwrites another: if the name already exists it is skipped and the report says so.
@@ -104,13 +104,13 @@ At the end you get a summary: folders renamed, covers made, games without a cove
 
 To see and check everything **before** changing anything:
 
-1. **Analyze card:** lists every game with the current name, the **new name**, *how it was identified* (name, approximate name, content/CRC or not identified) and whether it already has a cover. Orange = will be renamed; green = already right; red = not identified or with a missing file.
+1. **Analyze card:** lists every game with the current name, the **new name**, *how it was identified* (name, approximate name, content/CRC or not identified) and whether it already has a cover. Orange = will be renamed; green = already right; red = not identified, approximate name to review, or a missing file.
 2. **Apply names:** renames the folders (with confirmation). The log is kept in `_neocd-manager/desfazer.json`.
 3. **Undo last:** puts the folders of the last batch back to their previous names.
 4. **Make covers:** creates the `bg.bmp` files for the listed games, with the options from the *Prepare card* tab.
 5. **Preview:** click a game to see its cover **as the console will show it** (reduced colors and palettes), plus where the image came from.
 
-A name marked **approximate** means the folder title did not match the database exactly; check it before applying.
+An **approximate** name means the folder title did not match the database exactly. It shows in red, with a `?` in *New name*, and is **not renamed automatically** (not even by the *Prepare card* button). If the suggestion is right, **double-click** the row to accept it (double-click again to take it back) and then use **Apply names**. Until accepted, that game's cover is not looked up from the suggestion either.
 
 ---
 

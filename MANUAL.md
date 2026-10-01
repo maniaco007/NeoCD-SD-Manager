@@ -79,7 +79,7 @@ Lê as pastas de jogos do cartão e renomeia cada uma com o título certo.
 
 **Estilo do nome:**
 
-- **Título curto (padrão):** o título ocidental, sem etiquetas. Ex.: `Garou Densetsu 2 ~ Fatal Fury 2 (Japan) (En,Ja)` → `Fatal Fury 2`. Se duas pastas dariam o mesmo nome, entra a região: `Fatal Fury 2 (Japan)` e `Fatal Fury 2 (USA)`.
+- **Título curto (padrão):** o título ocidental, sem etiquetas e **sem subtítulo**. Ex.: `Garou Densetsu 2 ~ Fatal Fury 2 (Japan) (En,Ja)` → `Fatal Fury 2`; `Galaxy Fight - Universal Warriors` → `Galaxy Fight`. Se duas pastas dariam o mesmo nome, entra a região: `Fatal Fury 2 (Japan)` e `Fatal Fury 2 (USA)`.
 - **Nome oficial completo:** o nome do banco Redump, como está.
 
 Os nomes são gravados em **ASCII simples** (sem acentos e símbolos especiais), porque o loader usa a página de código 850 para nomes de arquivo. Só a **pasta** é renomeada: os arquivos dentro dela (`.cue`, `.bin`, `.wav`) **não são tocados**, então as referências do `.cue` continuam valendo. Uma pasta nunca sobrescreve outra: se o nome já existir, ela é pulada e o relatório avisa.
@@ -104,13 +104,13 @@ Ao final aparece o resumo: pastas renomeadas, capas geradas, jogos sem capa, jog
 
 Para ver e conferir tudo **antes** de mexer:
 
-1. **Analisar cartão:** lista todos os jogos com o nome atual, o **nome novo**, *como foi identificado* (nome, nome aproximado, conteúdo/CRC ou não identificado) e se já têm capa. Laranja = será renomeado; verde = já está certo; vermelho = não identificado ou com arquivo faltando.
+1. **Analisar cartão:** lista todos os jogos com o nome atual, o **nome novo**, *como foi identificado* (nome, nome aproximado, conteúdo/CRC ou não identificado) e se já têm capa. Laranja = será renomeado; verde = já está certo; vermelho = não identificado, nome aproximado a revisar, ou arquivo faltando.
 2. **Aplicar nomes:** renomeia as pastas (com confirmação). O registro fica em `_neocd-manager/desfazer.json`.
 3. **Desfazer último:** volta as pastas do último lote ao nome anterior.
 4. **Gerar capas:** cria os `bg.bmp` dos jogos listados, com as opções da aba *Preparar cartão*.
 5. **Prévia:** clique num jogo para ver a capa **como o console vai mostrar** (cores e paletas reduzidas), com a origem da imagem.
 
-Um nome marcado como **aproximado** significa que o título da pasta não bateu exatamente com o banco; confira antes de aplicar.
+Um nome **aproximado** significa que o título da pasta não bateu exatamente com o banco. Ele aparece em vermelho, com um `?` no *nome novo*, e **não é renomeado sozinho** (nem no botão *Preparar cartão*). Se a sugestão estiver certa, dê **dois cliques** na linha para aceitar (dois cliques de novo desfazem) e depois use **Aplicar nomes**. Enquanto não for aceito, a capa desse jogo também não é buscada pela sugestão.
 
 ---
 
