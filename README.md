@@ -6,7 +6,9 @@
 
 Um projeto do site **[Maniaco Game Room](https://www.maniacogameroom.com.br/)**.
 
-<img width="1448" height="1086" alt="Emblema NeoCD SD Manager Brasil" src="https://github.com/user-attachments/assets/45da0c50-bf61-4325-982b-e79e4cc1b663" />
+
+<img width="1774" height="887" alt="Banner gamer Neo Geo CD Brasil neon" src="https://github.com/user-attachments/assets/58fab11c-0bc0-4472-9d07-5c64560df3fe" />
+
 
 
 ## Como funciona
