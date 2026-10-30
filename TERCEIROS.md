@@ -3,11 +3,48 @@
 O `NeoCD-SD-Manager.exe` inclui os componentes abaixo, com os textos de licença originais.
 The `NeoCD-SD-Manager.exe` bundles the components below, with their original license texts.
 
-## Neo CD SD Loader — NSDL014B.WAD
+## Neo CD SD Loader — NSDL014D.WAD
 
-Arquivo de atualização do menu incluído no aplicativo. Baseado no **Neo CD SD Loader** de Furrtek (Sean Gonsalves), © 2019–2020, com modificações da BR Edition. Licença: **GNU General Public License**, versão 2 ou posterior (cabeçalhos dos arquivos-fonte). Texto completo da licença: <https://www.gnu.org/licenses/gpl-3.0.txt> (também no arquivo `LICENSE` do repositório abaixo). Código-fonte completo, incluindo o que gera o `.WAD`: <https://github.com/maniaco007/NeoCDSDLoader-BR-Edition> (projeto original: <https://github.com/furrtek/NeoCDSDLoader>).
+Arquivo de atualização do menu incluído no aplicativo. Baseado no **Neo CD SD Loader** de Furrtek (Sean Gonsalves), © 2019–2020, com modificações da BR Edition. Licença: **GNU General Public License**, versão 2 ou posterior (cabeçalhos dos arquivos-fonte). Texto completo da licença: <https://www.gnu.org/licenses/gpl-3.0.txt> (também no arquivo `LICENSE` do projeto original). O código-fonte completo correspondente, incluindo o que gera o `.WAD`, é fornecido a quem pedir, sem custo, pelas [Issues](https://github.com/maniaco007/NeoCD-SD-Manager/issues) (projeto original: <https://github.com/furrtek/NeoCDSDLoader>).
 
-Update file for the menu bundled in the app. Based on **Neo CD SD Loader** by Furrtek (Sean Gonsalves), © 2019–2020, with BR Edition changes. License: **GNU General Public License**, version 2 or later (source file headers). Full license text: <https://www.gnu.org/licenses/gpl-3.0.txt> (also in the `LICENSE` file of the repository above). Complete source code, including what builds the `.WAD`: <https://github.com/maniaco007/NeoCDSDLoader-BR-Edition> (original project: <https://github.com/furrtek/NeoCDSDLoader>).
+Update file for the menu bundled in the app. Based on **Neo CD SD Loader** by Furrtek (Sean Gonsalves), © 2019–2020, with BR Edition changes. License: **GNU General Public License**, version 2 or later (source file headers). Full license text: <https://www.gnu.org/licenses/gpl-3.0.txt> (also in the `LICENSE` file of the original project). The complete corresponding source code, including what builds the `.WAD`, is provided free of charge to anyone who asks, through the [Issues](https://github.com/maniaco007/NeoCD-SD-Manager/issues) (original project: <https://github.com/furrtek/NeoCDSDLoader>).
+
+## chdman 0.289 (MAME)
+
+Programa do MAME que o aplicativo usa para converter `.chd`, `.nrg`, `.toc` e `.cue` com áudio WAVE ao copiar jogos para o cartão. Vai dentro do `.exe` sem modificação, tirado da release oficial `mame0289` (`chdman.exe`, SHA-256 `8a74468e3b0879698835b57c3b58e88e5a51e4de73bee6ef755c28530b5b040f`) e é executado como programa separado. Licença: o MAME é distribuído sob a **GNU General Public License, versão 2 ou posterior**; partes do código são **BSD-3-Clause**. Texto da GPL 2.0: <https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>. Código-fonte correspondente: <https://github.com/mamedev/mame/tree/mame0289> (ou `mame0289s.exe` em <https://github.com/mamedev/mame/releases/tag/mame0289>).
+
+MAME program the app uses to convert `.chd`, `.nrg`, `.toc` and `.cue` with WAVE audio when copying games to the card. It is bundled unmodified in the `.exe`, taken from the official `mame0289` release (`chdman.exe`, SHA-256 `8a74468e3b0879698835b57c3b58e88e5a51e4de73bee6ef755c28530b5b040f`), and runs as a separate program. License: MAME is distributed under the **GNU General Public License, version 2 or later**; parts of the code are **BSD-3-Clause**. GPL 2.0 text: <https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>. Corresponding source code: <https://github.com/mamedev/mame/tree/mame0289> (or `mame0289s.exe` at <https://github.com/mamedev/mame/releases/tag/mame0289>).
+
+```
+Copyright <YEAR> <COPYRIGHT HOLDER>
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
 
 ## Pillow 12.3.0
 
