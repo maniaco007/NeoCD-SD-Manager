@@ -32,7 +32,7 @@ Um projeto do blog **[Maniaco Game Room](https://www.maniacogameroom.com.br/)**.
 - Um computador com **Windows 10 ou 11**.
 - Um **cartão SD formatado em FAT32**. O loader não lê exFAT nem NTFS; o aplicativo avisa se o cartão estiver em outro formato. Para **atualizar o firmware**, prefira um cartão de **até 32 GB** (veja [Como gravar o firmware](FIRMWARE.md)).
 - Os jogos, **cada um em uma pasta na raiz** do cartão com o arquivo **`.cue`** (mais os `.bin`/`.iso` e as faixas de áudio que ele cita). O menu lista as pastas que têm um `.cue` e mostra no máximo **200 jogos**. Se os jogos ainda estão no PC, o aplicativo copia e converte para você (passo 2 do [Preparar cartão](#3-preparar-cartão)).
-- **Internet** na primeira vez: o aplicativo baixa o banco de nomes (Redump) e as capas. Depois ficam guardados no PC, em `%LOCALAPPDATA%\NeoCD-SD-Manager`.
+- **Internet** na primeira vez: o aplicativo baixa o banco de nomes (Redump) e as listas de capas. Depois ficam guardados no PC, em `%LOCALAPPDATA%\NeoCD-SD-Manager`, e são baixados de novo uma vez por semana (jogos e capas novos). Sem internet, ele usa a cópia guardada.
 
 **Instalação:** não há instalação. Baixe o `NeoCD-SD-Manager.exe` na página de [Releases](../../releases) e abra. A partir da 1.1, o próprio aplicativo avisa quando sai uma versão nova (**Ajuda → Verificar atualizações…**).
 
@@ -215,7 +215,7 @@ O aplicativo guarda configurações e o cache de bancos/capas em `%LOCALAPPDATA%
 
 **"O cartão está em NTFS/exFAT — precisa ser FAT32".** O loader só lê FAT32. Copie os arquivos para o PC, formate o cartão em FAT32 (em cartões grandes, use uma ferramenta de formatação FAT32) e copie de volta.
 
-**Um jogo ficou "não identificado".** O nome da pasta não bate com nenhum jogo do banco (homebrew, hack ou nome muito diferente). Use **Editar nome…**, ou marque **Conferir pelo conteúdo (CRC)**. Ele ainda pode ganhar capa pela janela **Escolher capa…**.
+**Um jogo ficou "não identificado".** O nome da pasta não bate com nenhum jogo do banco (homebrew, hack ou nome muito diferente). Use **Editar nome…**, ou marque **Conferir pelo conteúdo (CRC)**. Ele ainda pode ganhar capa pela janela **Escolher capa…**: um nome que não está no banco é procurado pelo título no libretro e na versão cartucho (por exemplo, a conversão em CD de um jogo de cartucho).
 
 **Um jogo ficou "sem capa".** Abra **Escolher capa…** na tela *Capas*: além do libretro, ela procura no TheGamesDB, na versão cartucho e na Arcade Database. Se nada servir, cole ou escolha uma imagem do PC.
 

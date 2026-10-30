@@ -63,7 +63,7 @@ Passo a passo completo, com todas as opções: **[Manual do aplicativo](MANUAL.m
 - Neo Geo CD com o **Neo CD SD Loader** instalado (kit do Furrtek).
 - Windows 10 ou 11.
 - Cartão SD em **FAT32**, com até **200 jogos** (limite do menu). Para gravar o firmware, use um cartão de até 32 GB.
-- Internet na primeira vez (bancos de nomes e capas são baixados e ficam guardados no PC).
+- Internet na primeira vez (bancos de nomes e capas são baixados, ficam guardados no PC e são renovados uma vez por semana).
 
 ## Aviso
 

@@ -32,7 +32,7 @@ A project from the **[Maniaco Game Room](https://www.maniacogameroom.com.br/)** 
 - A computer with **Windows 10 or 11**.
 - An **SD card formatted as FAT32**. The loader does not read exFAT or NTFS; the app warns you if the card uses another format. To **update the firmware**, prefer a card of **up to 32 GB** (see [How to write the firmware](FIRMWARE.en.md)).
 - The games, **each in a folder in the card root** holding the **`.cue`** file (plus the `.bin`/`.iso` and audio tracks it lists). The menu lists the folders that have a `.cue` and shows at most **200 games**. If the games are still on the PC, the app copies and converts them for you (step 2 of [Prepare card](#3-prepare-card)).
-- **Internet** the first time: the app downloads the name database (Redump) and the covers. Then they stay on the PC, in `%LOCALAPPDATA%\NeoCD-SD-Manager`.
+- **Internet** the first time: the app downloads the name database (Redump) and the cover lists. Then they stay on the PC, in `%LOCALAPPDATA%\NeoCD-SD-Manager`, and are downloaded again once a week (new games and covers). Offline, it uses the saved copy.
 
 **Installation:** there is none. Download `NeoCD-SD-Manager.exe` from the [Releases](../../releases) page and open it. From 1.1 on, the app itself tells you when a new version is out (**Help → Check for updates…**).
 
@@ -215,7 +215,7 @@ The app keeps its settings and the database/cover cache in `%LOCALAPPDATA%\NeoCD
 
 **"The card is NTFS/exFAT — must be FAT32".** The loader only reads FAT32. Copy the files to the PC, format the card as FAT32 (for large cards use a FAT32 formatting tool) and copy them back.
 
-**A game is "not identified".** The folder name matches no game in the database (homebrew, hack or a very different name). Use **Edit name…**, or tick **Check by disc content (CRC)**. It can still get a cover through the **Choose cover…** window.
+**A game is "not identified".** The folder name matches no game in the database (homebrew, hack or a very different name). Use **Edit name…**, or tick **Check by disc content (CRC)**. It can still get a cover through the **Choose cover…** window: a name that is not in the database is looked up by title in libretro and in the cartridge version (for example, a CD conversion of a cartridge game).
 
 **A game has "no cover".** Open **Choose cover…** on the *Covers* page: besides libretro, it searches TheGamesDB, the cartridge version and the Arcade Database. If nothing fits, paste or choose an image from the PC.
 

@@ -60,7 +60,7 @@ Full walkthrough with every option: **[App manual](MANUAL.en.md)**.
 - Neo Geo CD with the **Neo CD SD Loader** installed (Furrtek's mod kit).
 - Windows 10 or 11.
 - **FAT32** SD card, with up to **200 games** (a menu limit). To write the firmware, use a card of up to 32 GB.
-- Internet the first time (name and cover databases are downloaded and kept on the PC).
+- Internet the first time (name and cover databases are downloaded, kept on the PC and refreshed once a week).
 
 ## Notice
 
