@@ -4,7 +4,7 @@
 
 O NeoCD SD Manager deixa o cartão SD do seu **Neo Geo CD com Neo CD SD Loader (BR Edition)** pronto em poucos cliques: instala o menu, copia os jogos do PC, organiza os nomes e gera a capa de cada um.
 
-Um projeto do blog **[Maniaco Game Room](https://www.maniacogameroom.com.br/)**. Este manual é da **versão 1.1**.
+Um projeto do blog **[Maniaco Game Room](https://www.maniacogameroom.com.br/)**. Este manual é da **versão 1.1.2**.
 
 ---
 
@@ -62,12 +62,12 @@ Um projeto do blog **[Maniaco Game Room](https://www.maniacogameroom.com.br/)**.
 
 ### Passo 1 — Instalar o menu
 
-Copia o arquivo de atualização **`NSDL014D.WAD`** (menu **V0.14 BR**, MCU **0.12**) para a raiz do cartão e confere a cópia byte a byte (CRC32).
+Copia o arquivo de atualização **`NSDL015A.WAD`** (menu **V0.15 BR**, com o MCU **0.13** incluso) para a raiz do cartão e confere a cópia byte a byte (CRC32).
 
 - O loader usa o **primeiro `.wad`** que achar na raiz. Por isso, se houver outro `.wad` no cartão (por exemplo, um `NSDL014B.WAD` antigo), o aplicativo o **move para o backup** (não apaga).
-- O aplicativo **não grava nada no console**. A gravação acontece quando você liga o console com o cartão — veja **[Como gravar o firmware](FIRMWARE.md)**. Quem já tem um menu V0.14BR anterior precisa usar **Atualizar firmware** no menu do loader.
+- O aplicativo **não grava nada no console**. A gravação acontece quando você liga o console com o cartão — veja **[Como gravar o firmware](FIRMWARE.md)**. Quem já tem um menu BR anterior (por exemplo, V0.14BR) não deve contar com a atualização automática: use **Atualizar firmware** em **Opções**, no menu do loader.
 
-**Opção "Também gravar o MCU novo no console"** (desligada por padrão). O MCU é o microcontrolador do loader; a versão 0.12 corrige a **ordenação da lista de jogos**. Ele só é regravado quando existe um **`NSDLZZZZ.WAD`** no cartão, e o aplicativo cria esse arquivo se você marcar a opção. Faça uma vez por console e depois tire o arquivo (detalhes no [tutorial do firmware](FIRMWARE.md)). Quem já está com `MCU: V00.12` não precisa marcar.
+**Opção "Também gravar o MCU novo no console"** (desligada por padrão). O MCU é o microcontrolador do loader; a versão 0.13, que acompanha o `NSDL015A.WAD`, corrige a **atualização com capas**; a 0.12 corrigiu a **ordenação da lista de jogos**. Ele só é regravado quando existe um **`NSDLZZZZ.WAD`** no cartão, e o aplicativo cria esse arquivo se você marcar a opção. Faça uma vez por console e depois tire o arquivo (detalhes no [tutorial do firmware](FIRMWARE.md)). Quem já está com `MCU: V00.13` não precisa marcar.
 
 ### Passo 2 — Copiar jogos de uma pasta do PC
 
@@ -106,7 +106,7 @@ Cria um **`bg.bmp`** na pasta de cada jogo — é a capa que o menu mostra ao la
 
 De onde vem a capa, em ordem: a imagem que você escolheu para o jogo (tela [Capas](#5-capas)), a pasta *Minhas imagens*, a caixa do Neo Geo CD do libretro-thumbnails e, quando ela não existe, a capa do TheGamesDB, a caixa da versão cartucho (AES) ou o flyer do arcade.
 
-O formato é o do menu: **128 × 128**, 4 bits por pixel, até **8 paletas de 15 cores**, cores em 5 bits por canal. A conversão da 1.1 escolhe as paletas por bloco de 16 × 16 pixels de forma mais fiel (foi conferida no console com Metal Slug e Mutation Nation). Confira o resultado na prévia da tela [Capas](#5-capas).
+O formato é o do menu: **128 × 128**, 4 bits por pixel, até **32 paletas de 15 cores** (uma por bloco de 16 × 16 pixels), cores em 5 bits por canal. A conversão da 1.1 escolhe as paletas por bloco de forma mais fiel (foi conferida no console com Metal Slug e Mutation Nation), e a 1.1.2 passou de 8 para 32 paletas. Capas de 32 paletas exigem o menu **V0.15BR**; as capas antigas continuam aceitas. Confira o resultado na prévia da tela [Capas](#5-capas).
 
 Ao final aparece o resumo: jogos copiados, pastas renomeadas, capas geradas, jogos sem capa, não identificados e avisos.
 
@@ -171,20 +171,21 @@ O tutorial completo, com fotos das telas, está em **[Como gravar o firmware](FI
 ## 8. No console
 
 1. Desligue o console, coloque o cartão no SD Loader e ligue.
-2. Se o menu precisar ser gravado, o loader faz isso sozinho na inicialização (o LED pisca em azul; não desligue). **Se o console já tem um V0.14BR anterior** (ex.: `NSDL014B`), ele **não** se atualiza sozinho: no menu do loader escolha **Atualizar firmware**. Passo a passo em [Como gravar o firmware](FIRMWARE.md).
+2. Se o menu precisar ser gravado, o loader faz isso sozinho na inicialização (o LED pisca em azul; não desligue). **Se o console já tem um menu BR anterior** (ex.: `NSDL014B` ou `NSDL014D`), não conte com a atualização automática: aperte **C** (Opções) no menu do loader e escolha **Atualizar firmware**. Passo a passo em [Como gravar o firmware](FIRMWARE.md).
 3. Na lista de jogos, os títulos aparecem com os nomes organizados. Ao parar o cursor sobre um jogo, a **capa** aparece na caixa ao lado da lista.
-4. Novidades do menu `NSDL014D`: em **Configurações** há a linha **Idioma** (PT-BR, padrão, ou English); a capa some enquanto o menu de opções está aberto; ao voltar com **B**, o cursor continua no mesmo jogo; nomes longos rolam em loop.
+4. Novidades do menu `NSDL015A` (V0.15BR): além da lista, o menu tem o **carrossel** de cinco capas, com a central em destaque e o título acima (opção **Visualização** em **Configurações**); **Tamanho** de 80% a 100% (esquerda diminui, direita aumenta); a bandeira acompanha o idioma do menu (sem trocar a região); as telas de **carregar** e **salvar** dados do cartão SD foram corrigidas. Continuam valendo: a linha **Idioma** em **Configurações** (PT-BR, padrão, ou English), a capa que some enquanto o menu de opções está aberto, o cursor que fica no mesmo jogo ao voltar com **B** e os nomes longos rolando em loop.
 
 ![Lista de jogos com a capa ao lado](imagens/menu-lista-capa.png)
 
-![Capa de um jogo na caixa ao lado da lista](imagens/menu-capa.png)
+![Carrossel de cinco capas](imagens/menu-carrossel.png)
 
-A tela **Sobre** mostra `Menu: V0.14BR` e `MCU: V00.12`:
+A tela **Sobre** mostra `Menu: V0.15BR`; o MCU aparece como `V00.13` se você já gravou o MCU 0.13 (senão, mostra a versão anterior):
 
 | | |
 |---|---|
-| ![Menu principal](imagens/menu-principal.png) | ![Configurações](imagens/menu-configuracoes.png) |
-| ![Créditos](imagens/menu-creditos.png) | |
+| ![Menu de opções](imagens/menu-principal.png) | ![Configurações](imagens/menu-configuracoes.png) |
+| ![Créditos](imagens/menu-creditos.png) | ![Carregar dados do cartão SD](imagens/menu-carregar.png) |
+| ![Salvar dados no cartão SD](imagens/menu-salvar.png) | |
 
 ---
 
@@ -192,7 +193,7 @@ A tela **Sobre** mostra `Menu: V0.14BR` e `MCU: V00.12`:
 
 ```
 /                         raiz do cartão (FAT32)
-├─ NSDL014D.WAD           menu V0.14 BR + MCU 0.12
+├─ NSDL015A.WAD           menu V0.15 BR (inclui o MCU 0.13)
 ├─ NSDLZZZZ.WAD           (só se você pediu "gravar o MCU"; tire depois do 1º boot)
 ├─ bg.bmp                 (opcional) capa geral do menu
 ├─ ROMDUMP.BIN            criado pelo loader ao gravar o menu: a BIOS do SEU console (não distribua)
@@ -223,7 +224,7 @@ O aplicativo guarda configurações e o cache de bancos/capas em `%LOCALAPPDATA%
 
 **O jogo não aparece no menu.** Rode **Verificar cartão**. Confira também se a pasta está na raiz, tem um `.cue` e se o cartão não passa de 200 jogos.
 
-**O console não atualizou o menu.** Deve haver **um só `.wad`** na raiz. Se o console já tinha um V0.14BR, use **Atualizar firmware** no menu do loader. Se voltar para a tela original do console, troque por um cartão de até 32 GB. Tudo em [Como gravar o firmware](FIRMWARE.md#5-se-algo-der-errado).
+**O console não atualizou o menu.** Deve haver **um só `.wad`** na raiz. Se o console já tinha um menu BR, use **Atualizar firmware** no menu do loader. Se voltar para a tela original do console, troque por um cartão de até 32 GB. Tudo em [Como gravar o firmware](FIRMWARE.md#5-se-algo-der-errado).
 
 **O Windows bloqueou o programa / o antivírus reclamou.** O `.exe` é novo e sem assinatura paga; programas empacotados assim às vezes geram alerta falso. Confira o `.exe` pelo SHA-256 publicado na página da versão.
 

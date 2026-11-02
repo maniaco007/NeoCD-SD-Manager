@@ -15,7 +15,7 @@ Um projeto do site **[Maniaco Game Room](https://www.maniacogameroom.com.br/)**.
 
 Você coloca o cartão SD no PC, abre o aplicativo e clica em **Preparar cartão**. Ele:
 
-1. **instala o menu BR Edition** no cartão (copia o arquivo de atualização `NSDL014D.WAD` e confere a cópia);
+1. **instala o menu BR Edition** no cartão (copia o arquivo de atualização `NSDL015A.WAD` e confere a cópia);
 2. **copia jogos de uma pasta do PC**, convertendo `.chd`, `.ccd`, `.nrg`, `.iso` e `.zip` para o formato que o loader lê;
 3. **organiza o nome dos jogos:** identifica cada pasta pelo nome (e, se você quiser, pelo conteúdo do disco, comparando com o banco Redump) e renomeia com o título certo, por exemplo `metal_slug_2 [!]` → `Metal Slug 2`;
 4. **gera a capa de cada jogo** (`bg.bmp`), pronta para o console, usando as suas imagens ou baixando da internet.
@@ -24,7 +24,7 @@ Você coloca o cartão SD no PC, abre o aplicativo e clica em **Preparar cartão
 
 | | |
 |---|---|
-| ![Capas](imagens/app-capas.png) | ![Capa no console](imagens/menu-capa.png) |
+| ![Capas](imagens/app-capas.png) | ![Carrossel de capas no console](imagens/menu-carrossel.png) |
 | ![Organizar jogos](imagens/app-jogos.png) | ![Tela Loader](imagens/app-loader.png) |
 
 **O menu no console:**
@@ -37,6 +37,13 @@ Você coloca o cartão SD no PC, abre o aplicativo e clica em **Preparar cartão
 - **Prévia fiel:** ao clicar num jogo, você vê a capa como o console vai mostrar (cores reduzidas, mesmas paletas).
 - **Português ou inglês:** menu **Idioma / Language**, com temas de cor para a janela. O menu do console também tem a opção **Idioma** (PT-BR ou English).
 
+## Novidades da versão 1.1.2
+
+- Menu do console **`NSDL015A`** (**V0.15BR**): lista com a capa ao lado e **carrossel** de cinco capas (opção **Visualização** em **Configurações**); ajuste de **Tamanho** de 80% a 100%; bandeira que acompanha o idioma do menu; cabeçalho **NeoSDLoader / MGR Edition**; telas de **carregar** e **salvar** dados do cartão SD corrigidas, inclusive com a lista vazia.
+- **Capas de até 32 paletas** (antes, 8): o aplicativo gera a capa nesse formato por padrão e a prévia mostra o mesmo resultado. Capas novas exigem o menu **V0.15BR**; as capas antigas continuam aceitas.
+- O `NSDL015A.WAD` traz o **MCU 0.13** (corrige a atualização com capas). O MCU só é gravado se você pedir ([tutorial](FIRMWARE.md)).
+- Quem já tem um menu BR instalado atualiza pela opção **Atualizar firmware** em **Opções** ([tutorial](FIRMWARE.md#4-atualizar-um-console-que-já-tem-um-menu-br)); não conte com a atualização automática ao ligar.
+
 ## Novidades da versão 1.1
 
 - Janela nova, com barra lateral: **Preparar cartão**, **Organizar jogos**, **Capas**, **Verificar cartão** e **Loader**.
@@ -44,7 +51,7 @@ Você coloca o cartão SD no PC, abre o aplicativo e clica em **Preparar cartão
 - **Copiar jogos do PC** com conversão de `.chd`, `.ccd`, `.nrg`, `.toc`, `.iso`, `.bin` e `.zip`.
 - **Verificar cartão:** acha o que o loader não lê e corrige o que é seguro.
 - **Editar nome** e **não alterar** por jogo; **capa geral** do menu.
-- Menu do console **`NSDL014D`**: seletor de idioma, capa escondida no menu de opções, cursor mantido na volta e nomes longos rolando em loop. Quem já tem o V0.14BR atualiza pela opção **Atualizar firmware** do menu ([tutorial](FIRMWARE.md#4-atualizar-um-console-que-já-tem-o-v014br)).
+- Menu do console **`NSDL014D`**: seletor de idioma, capa escondida no menu de opções, cursor mantido na volta e nomes longos rolando em loop. Quem já tem o V0.14BR atualiza pela opção **Atualizar firmware** do menu ([tutorial](FIRMWARE.md#4-atualizar-um-console-que-já-tem-um-menu-br)).
 - Tela **Loader** com os códigos de LED, e aviso de atualização do próprio aplicativo.
 
 ## Como usar
@@ -54,7 +61,7 @@ Você coloca o cartão SD no PC, abre o aplicativo e clica em **Preparar cartão
 3. Abra o aplicativo, escolha o cartão e clique em **Preparar cartão**.
 4. Coloque o cartão no console e ligue.
 
-Na primeira vez, o loader grava o menu novo (e o MCU, se você pediu). Quem já tem o menu V0.14BR usa **Atualizar firmware** no menu do loader. Passo a passo e códigos de LED: **[Como gravar o firmware](FIRMWARE.md)**.
+Na primeira vez, o loader grava o menu novo (e o MCU, se você pediu). Quem já tem um menu BR instalado usa **Atualizar firmware** em **Opções**, no menu do loader. Passo a passo e códigos de LED: **[Como gravar o firmware](FIRMWARE.md)**.
 
 Passo a passo completo, com todas as opções: **[Manual do aplicativo](MANUAL.md)**.
 
@@ -67,7 +74,7 @@ Passo a passo completo, com todas as opções: **[Manual do aplicativo](MANUAL.m
 
 ## Aviso
 
-Este projeto **não fornece jogos nem BIOS**. O arquivo de atualização do menu incluído (`NSDL014D.WAD`) é software livre (GPL) baseado no [Neo CD SD Loader de Furrtek](http://www.furrtek.org/sdloader/) e contém apenas os patches do loader, sem a BIOS do console. Este projeto não é afiliado à SNK nem a Furrtek. Use por sua conta e risco.
+Este projeto **não fornece jogos nem BIOS**. O arquivo de atualização do menu incluído (`NSDL015A.WAD`) é software livre (GPL) baseado no [Neo CD SD Loader de Furrtek](http://www.furrtek.org/sdloader/) e contém apenas os patches do loader, sem a BIOS do console. Este projeto não é afiliado à SNK nem a Furrtek. Use por sua conta e risco.
 
 ## Créditos
 

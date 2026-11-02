@@ -3,7 +3,7 @@
 O `NeoCD-SD-Manager.exe` inclui os componentes abaixo, com os textos de licença originais.
 The `NeoCD-SD-Manager.exe` bundles the components below, with their original license texts.
 
-## Neo CD SD Loader — NSDL014D.WAD
+## Neo CD SD Loader — NSDL015A.WAD
 
 Arquivo de atualização do menu incluído no aplicativo. Baseado no **Neo CD SD Loader** de Furrtek (Sean Gonsalves), © 2019–2020, com modificações da BR Edition. Licença: **GNU General Public License**, versão 2 ou posterior (cabeçalhos dos arquivos-fonte). Texto completo da licença: <https://www.gnu.org/licenses/gpl-3.0.txt> (também no arquivo `LICENSE` do projeto original). O código-fonte completo correspondente, incluindo o que gera o `.WAD`, é fornecido a quem pedir, sem custo, pelas [Issues](https://github.com/maniaco007/NeoCD-SD-Manager/issues) (projeto original: <https://github.com/furrtek/NeoCDSDLoader>).
 
